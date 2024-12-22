@@ -31,6 +31,10 @@ models:
         description: 'Country where the lead operates.'
       - name: email
         description: 'Email address of the lead.'
+      - name: phone
+        description: 'Phone of the lead.'
+      - name: mobile_phone
+        description: 'Mobile phone of the lead.'
       - name: is_converted
         description: 'Boolean indicating if the lead is converted.'
       - name: Status
@@ -55,8 +59,6 @@ models:
         description: 'Indicates if financial aid is accepted.'
       - name: schedule
         description: 'Operating schedule of the lead.'
-      - name: phone
-        description: 'Primary phone number from source 3.'
       - name: operator
         description: 'Operator or owner from source 3.'
       - name: license_status
