@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: stg
+    database: DBT_TEST
+    schema: stg
+    quoting:
+      database: true
+      schema: false
+      identifier: false
+    tables:
+      - name: stg_salesforce_leads
+      - name: stg_source_s1
+      - name: stg_source_s2
+      - name: stg_source_s3

@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: fct_leads
+    description: 'Standardized schema integrating Salesforce leads data with licensing and compliance information.'
+    columns:
+      - name: provider_id
+        description: 'Unique identifier for each provider.'
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: 'First name of the lead.'
+      - name: last_name
+        description: 'Last name of the lead.'
+      - name: company
+        description: 'Company name of the lead.'
+      - name: address1
+        description: 'Primary address of the lead.'
+      - name: address2
+        description: 'Secondary address from source 1.'
+      - name: city
+        description: 'City of the lead.'
+      - name: state
+        description: 'State where the lead operates.'
+      - name: zip
+        description: 'Postal code for the lead address.'
+      - name: county
+        description: 'County from source 1.'
+      - name: country
+        description: 'Country where the lead operates.'
+      - name: email
+        description: 'Email address of the lead.'
+      - name: is_converted
+        description: 'Boolean indicating if the lead is converted.'
+      - name: Status
+        description: 'Current status of the lead.'
+      - name: created_date
+        description: 'Date when the lead was created.'
+      - name: last_modified_date
+        description: 'Date when the lead was last modified.'
+      - name: last_activity_date
+        description: 'Date of the last activity on the lead.'
+      - name: last_viewed_date
+        description: 'Date when the lead was last viewed.'
+      - name: capacity_c
+        description: 'Capacity data from the lead.'
+      - name: lead_source
+        description: 'Source from which the lead originated.'
+      - name: curriculum_type
+        description: 'Type of curriculum offered by the lead.'
+      - name: capacity
+        description: 'Capacity data from source 2.'
+      - name: accepts_financial_aid
+        description: 'Indicates if financial aid is accepted.'
+      - name: schedule
+        description: 'Operating schedule of the lead.'
+      - name: phone
+        description: 'Primary phone number from source 3.'
+      - name: operator
+        description: 'Operator or owner from source 3.'
+      - name: license_status
+        description: 'License status of the lead.'
+      - name: license_number
+        description: 'Unique license number from source 2.'
+      - name: license_issued
+        description: 'Date when the license was issued.'
+      - name: license_renewed
+        description: 'Date when the license was renewed.'
+      - name: license_issued_date
+        description: 'Formatted date of license issuance.'
+      - name: compliance_frequency
+        description: 'Frequency of compliance monitoring.'
+      - name: operating_hours
+        description: 'Operating hours of the lead.'
+      - name: star_rating
+        description: 'Star rating assigned for compliance.'
+      - name: compliance_monitoring_date
+        description: 'Date of compliance monitoring.'
+      - name: facility_type
+        description: 'Type of facility operated.'
+      - name: min_age
+        description: 'Minimum age accepted by the facility.'
+      - name: max_age
+        description: 'Maximum age accepted by the facility.'
+      - name: audit_date
+        description: 'Date of the most recent audit.'
+      - name: audit_notes
+        description: 'Notes from the most recent audit.'
+      - name: certificate_expiration_date
+        description: 'Expiration date of the certificate.'
+      - name: website
+        description: 'Website of the lead.'
+      - name: brightwheel_school_uuid_c
+        description: 'Brightwheel UUID for the school.'
