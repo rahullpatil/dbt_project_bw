@@ -46,4 +46,3 @@ The project can be extended to integrate with BI tools such as Tableau or Power 
 
 Completed Successfully in the local envrionment. 
 
-Feedback and contributions are welcome!
