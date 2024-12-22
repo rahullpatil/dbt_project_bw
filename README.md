@@ -32,8 +32,6 @@ Incremental Loads: Implement incremental models in DBT to process only new or up
 
 Dimensional Modeling: Develop clear business use cases and implement dimensional models with fact and dimension tables for optimized analytics and scalability.
 
-Dimensional Modeling: Develop clear business use cases and implement dimensional models with fact and dimension tables for optimized analytics and scalability.
-
 Data Versioning: Track historical changes using slowly changing dimensions (SCD) strategies.
 
 Automation: Schedule and automate pipeline runs using Airflow/Fivetran.
