@@ -17,8 +17,8 @@ WITH leads AS (
             ELSE FALSE
         END AS is_converted,
         Status, 
-        TO_TIMESTAMP(created_date, 'MM/DD/YY HH24:MI') as created_date,
-        TO_TIMESTAMP(last_modified_date , 'MM/DD/YY HH24:MI')as last_modified_date,
+        TO_TIMESTAMP(created_date, 'MM/DD/YY HH24:MI') AS created_date,
+        TO_TIMESTAMP(last_modified_date , 'MM/DD/YY HH24:MI') AS last_modified_date,
         last_activity_date,
         last_viewed_date, 
         capacity_c,
@@ -29,7 +29,7 @@ WITH leads AS (
         website,
         brightwheel_school_uuid_c
     FROM {{ source('stg','stg_salesforce_leads') }}
-     WHERE country NOT LIKE '[0-9]%' -- Exclude invalid country values with numbers
+    WHERE country NOT LIKE '[0-9]%' -- Exclude invalid country values with numbers
 ),
 
 source_s1 AS (
@@ -40,7 +40,7 @@ source_s1 AS (
          county,
          phone
     FROM {{ source('stg','stg_source_s1') }}
-     WHERE Name IS NOT NULL -- Validate non-null company names
+    WHERE Name IS NOT NULL -- Validate non-null company names
 ),
 
 source_s2 AS (
