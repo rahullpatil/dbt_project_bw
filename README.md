@@ -30,6 +30,8 @@ Documentation: Expand documentation to cover data lineage and relationships betw
 
 Incremental Loads: Implement incremental models in DBT to process only new or updated records instead of full table scans.
 
+Dimensional Modeling: Develop clear business use cases and implement dimensional models with fact and dimension tables for optimized analytics and scalability.
+
 Data Versioning: Track historical changes using slowly changing dimensions (SCD) strategies.
 
 Automation: Schedule and automate pipeline runs using Airflow/Fivetran.
