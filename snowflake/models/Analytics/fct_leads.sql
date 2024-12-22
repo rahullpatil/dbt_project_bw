@@ -12,6 +12,8 @@ WITH leads AS (
         postal_code AS zip,
         country,
         email,
+        phone,
+        mobile_phone,
         CASE 
             WHEN Is_converted IN ('true', '1', 'yes', 'Y') THEN TRUE
             ELSE FALSE
@@ -29,7 +31,7 @@ WITH leads AS (
         website,
         brightwheel_school_uuid_c
     FROM {{ source('stg','stg_salesforce_leads') }}
-    WHERE country NOT LIKE '[0-9]%' -- Exclude invalid country values with numbers
+     WHERE country NOT LIKE '[0-9]%' -- Exclude invalid country values with numbers
 ),
 
 source_s1 AS (
@@ -40,7 +42,7 @@ source_s1 AS (
          county,
          phone
     FROM {{ source('stg','stg_source_s1') }}
-    WHERE Name IS NOT NULL -- Validate non-null company names
+     WHERE Name IS NOT NULL -- Validate non-null company names
 ),
 
 source_s2 AS (
@@ -71,7 +73,6 @@ source_s3 AS (
         City AS city,
         State AS state,
         Zip AS zip,
-        Phone AS phone,
         Capacity AS capacity,
         Status AS license_status,
         IssueDate AS license_issued_date,
@@ -96,6 +97,8 @@ SELECT
     source_s1.county,
     leads.country,
     leads.email,
+    leads.phone,
+    leads.mobile_phone,
     leads.is_converted,
     leads.Status, 
     leads.created_date, 
@@ -108,7 +111,6 @@ SELECT
     source_s2.capacity,
     source_s2.accepts_financial_aid,
     source_s2.schedule,
-    source_s3.phone,
     source_s3.operator,
     source_s3.license_status,
     source_s2.license_number,
