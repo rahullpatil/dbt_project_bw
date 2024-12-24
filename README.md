@@ -1,4 +1,4 @@
-Welcome to Brighwheel dbt project!
+Welcome to dbt project!
 
 ### DBT project
 
